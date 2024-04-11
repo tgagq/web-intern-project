@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+
+.image {
+  height: 195px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image.large {
+  grid-row: span 2;
+  grid-column: span 2;
+  height: 400px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flex-container > section {
+  max-width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container > section > img {
+  max-width: 100%;
+}
+
+.flex-container > section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.flex-container > section .buttonTitleContainer > button {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(0, 149, 255);
+  color: white;
+  border: none;
+}
+
+.flex-container > section .buttonTitleContainer > h2 {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(74, 74, 74);
+}
+.flex-container > section > h2 {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(74, 74, 74);
+}
+
+.carusel_item {
+  width: 180px;
+  border: solid 1px rgb(235, 235, 235);
+}
+
+.carusel_item > h2,
+.carusel_item > p,
+.carusel_item img {
+  width: 100%;
+  text-align: center;
+}
+
+.carusel_container {
+  position: relative;
+}
+
+.carusel_container h2 {
+  color: rgb(0, 149, 255);
+  font-size: 16px;
+}
+
+.glide__arrow--left {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -5%;
+}
+
+.glide__arrow--right {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 105%;
+}
+
+.glide__arrow {
+  border-radius: 50%;
+  display: flex;
+  border: none;
+  background-color: rgb(183, 183, 183);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.glide__bullet {
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.glide__bullets {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.glide__bullet:focus {
+  background-color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hideOnMobile {
+  display: block;
+}
+.hideOnDesktop {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .flex-container > section {
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container > section {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 50px;
+    padding-top: 20px;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .hideOnDesktop {
+    display: block;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .image.large {
+    height: 200px;
+  }
+
+  .flex-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .fkex-conainer > section .buttonTitleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-container > section {
+    flex-direction: row;
+  }
+  .carusel_item {
+    width: fit-content;
+    border: solid 1px rgb(235, 235, 235);
+  }
+}
